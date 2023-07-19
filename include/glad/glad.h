@@ -5140,6 +5140,22 @@ typedef void (APIENTRYP PFNGLTEXTUREBARRIERPROC)();
 GLAPI PFNGLTEXTUREBARRIERPROC glad_glTextureBarrier;
 #define glTextureBarrier glad_glTextureBarrier
 #endif
+#ifndef GL_VERSION_4_6
+#define GL_VERSION_4_6 1
+GLAPI int GLAD_GL_VERSION_4_6;
+typedef void (APIENTRYP PFNGLSPECIALIZESHADERPROC)(GLuint shader, const GLchar *pEntryPoint, GLuint numSpecializationConstants, const GLuint *pConstantIndex, const GLuint *pConstantValue);
+GLAPI PFNGLSPECIALIZESHADERPROC glad_glSpecializeShader;
+#define glSpecializeShader glad_glSpecializeShader
+typedef void (APIENTRYP PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC)(GLenum mode, const void *indirect, GLintptr drawcount, GLsizei maxdrawcount, GLsizei stride);
+GLAPI PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC glad_glMultiDrawArraysIndirectCount;
+#define glMultiDrawArraysIndirectCount glad_glMultiDrawArraysIndirectCount
+typedef void (APIENTRYP PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC)(GLenum mode, GLenum type, const void *indirect, GLintptr drawcount, GLsizei maxdrawcount, GLsizei stride);
+GLAPI PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC glad_glMultiDrawElementsIndirectCount;
+#define glMultiDrawElementsIndirectCount glad_glMultiDrawElementsIndirectCount
+typedef void (APIENTRYP PFNGLPOLYGONOFFSETCLAMPPROC)(GLfloat factor, GLfloat units, GLfloat clamp);
+GLAPI PFNGLPOLYGONOFFSETCLAMPPROC glad_glPolygonOffsetClamp;
+#define glPolygonOffsetClamp glad_glPolygonOffsetClamp
+#endif
 #ifndef GL_ES_VERSION_2_0
 #define GL_ES_VERSION_2_0 1
 GLAPI int GLAD_GL_ES_VERSION_2_0;
